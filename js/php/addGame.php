@@ -2,7 +2,7 @@
 
 		require_once 'db.php'; 
 		
-		if(isset($_GET['username'])){
+		if(isset($_GET['asd'])){
 			$username = $_GET['username'];
 			$psw = $_GET['password'];
 			$admin = $_GET['admin'];

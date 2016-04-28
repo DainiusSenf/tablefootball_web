@@ -55,6 +55,7 @@
 					<option value="{{user.id}}" ng-repeat="user in users">{{user.username}}</option>
 				</select>
 				</div>
+				{{player3}}
 			</td>
 			<td height = "100px" style='width:400px;'>
 				<div class="styled-select">
@@ -62,6 +63,7 @@
 					<option value="{{user.id}}" ng-repeat="user in users">{{user.username}}</option>
 				</select>
 				</div>
+				{{player4}}
 			</td>
 			<td height = "100px" style='width:400px;'>
 				<input type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57' name="score2" ng-model="score2"><br>
@@ -71,7 +73,7 @@
 		<br>
 		<br>
 		<div style="text-align:center;">
-			<button type="submit" ng-disabled="form.$invalid || vm.dataLoading" class="btn btn-primary submit-button-addGame">Patvirtinti</button>
+			<button type="submit" ng-disabled="form.$invalid || vm.dataLoading" class="btn btn-primary submit-button-addGame" ng-click="submit()">Patvirtinti</button>
 		</div>
 
     
