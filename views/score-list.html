@@ -1,0 +1,58 @@
+<div ng-controller="AppCtrl as appCtrl" ng-cloak>
+   
+   
+<h2 style="text-align: center">Paskutinių rungtynių rezultatai</h2>
+<br>
+
+    <!--  <md-list>
+         <md-list-item class="md-2-line" ng-repeat="tile in appCtrl.colorTiles"
+            ng-style="{
+            'background': tile.color
+            }"
+            md-colspan-gt-sm="{{tile.colspan}}"
+            md-rowspan-gt-sm="{{tile.rowspan}}">
+            <div class="columns">
+               <div class="red" >
+                  <p class="score-center">Dainius</p>
+                  <p class="score-center">Haris</p>
+               </div>
+               <div class="red">
+                  <p class="score-center"> 10 - 9</p>
+               </div>
+               <div class="red">
+                  <p class="score-center">Jurgis</p>
+                  <p class="score-center">Evelina</p>
+               </div>
+            </div>
+            <div class="clear"></div>
+         </md-list-item>
+      </md-list>
+   </md-content>
+   -->
+   <md-content>
+		
+		<table id="cssTable">
+		  <tr>
+			<th>Komanda #1</th>
+			<th>Rezultatas</th>
+			<th>Komanda #2</th>
+		  </tr>
+		  <tr style="text-align: center" ng-repeat="tile in appCtrl.colorTiles"
+		  ng-style="{
+            'background': tile.color
+            }"
+            md-colspan-gt-sm="{{tile.colspan}}"
+            md-rowspan-gt-sm="{{tile.rowspan}}">
+			<td height = "100px" width = "50%">
+				<p>Dainius</p>
+				<p>Haris</p>
+			</td>
+			<td height = "100px">10 - 9</td>
+			<td height = "100px" width = "50%">
+				<p>Dainius</p>
+				<p>Haris</p>
+			</td>
+		  </tr>
+		</table>
+	 </md-content>
+</div>

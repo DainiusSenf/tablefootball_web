@@ -1,0 +1,23 @@
+<div ng-controller="RankCtrl" ng-cloak>
+	<h2 style="text-align: center">Žaidėjų reitingas</h2>
+	<br>
+	<md-content>
+		
+		<table class="table table-bordered table-condensed">
+		  <tr>
+			<th>Place</th>
+			<th>Name</th>
+			<th>Score</th>
+		  </tr>
+		  <tr ng-repeat="user in tasks track by $index">
+			<td width = "15%">
+				{{user.id}}
+			</td>
+			<td>{{user.username}}</td>
+			<td width = "15%">
+			  100
+			</td>
+		  </tr>
+		</table>
+	 </md-content>
+</div>

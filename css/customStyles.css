@@ -1,0 +1,69 @@
+.nav-bar-container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left:100px;
+    padding-right: 100px;
+}
+
+#cssTable td {
+	text-align:center;
+	vertical-align:middle;
+	}
+	
+th {
+	text-align:center;
+	font-size: 150%;
+}
+
+.youtube-player { 
+	display: block; margin: 0 auto;
+	}
+	
+	
+.inputLabel {
+  display: inline-block;
+  width: 140px;
+  text-align: right;
+}​
+
+table
+{ 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logout-button
+{ 
+    margin-left: 10px;
+    margin-right: 10px;
+	margin-top: 8px;
+}
+
+.submit-button-addGame
+{ 
+   width: 350px;
+   height: 50px;
+   font-size: 100%;
+}
+
+.styled-select {
+   width: 240px;
+   height: 34px;
+   overflow: hidden;
+   background: url(down_arrow_select.jpg) no-repeat right #ddd;
+   border: 1px solid #ccc;
+   margin-right: auto;
+    margin-left: auto;
+   }
+
+.styled-select select {
+   background: transparent;
+   width: 268px;
+   padding: 5px;
+   font-size: 16px;
+   line-height: 1;
+   border: 0;
+   border-radius: 0;
+   height: 34px;
+   -webkit-appearance: none;
+   }

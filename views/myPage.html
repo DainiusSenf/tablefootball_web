@@ -1,0 +1,42 @@
+<div ng-controller="myPageCtrl as appCtrl" ng-cloak>
+<h2 style="text-align: center">Turite 5 nepatvirtintus žaidimus</h2>
+<h2 style="text-align: center">Paskutinių 5 mano žaidimų rezultatai</h2>
+<br>
+
+   <md-content>
+		<div style="margin:0 auto;">
+		<table id="cssTable">
+		  <tr>
+			<th>Komanda #1</th>
+			<th>Rezultatas</th>
+			<th>Komanda #2</th>
+			<th>Patvirtinti</th>
+		  </tr>
+		  <tr style="text-align: center" ng-repeat="tile in appCtrl.colorTiles"
+		  ng-style="{
+            'background': tile.color
+            }"
+            md-colspan-gt-sm="{{tile.colspan}}"
+            md-rowspan-gt-sm="{{tile.rowspan}}">
+			<td height = "100px" width = "40%">
+				<p>Dainius</p>
+				<p>Haris</p>
+			</td>
+			<td height = "100px">10 - 9</td>
+			<td height = "100px" width = "40%">
+				<p>Dainius</p>
+				<p>Haris</p>
+			</td>
+			<td width = "40%"><button type="submit" ng-disabled="form.$invalid || vm.dataLoading" class="btn btn-primary">Patvirtinti</button></td>
+		  </tr>
+		</table>
+		</div>
+	 </md-content>
+	 <br>
+	 <br>
+	 <h2>Statistika</h2>
+	 <h3 >Geriausia vieta: 4</h2>
+	 <h3 >Laimeta is eiles: 2</h2>
+	 <h3 >Pralaimeta is eiles: 0</h2>
+	 <h3 >Laimejimo procentas: 40%</h2>
+</div>

@@ -1,0 +1,90 @@
+<div ng-controller="AppCtrl as appCtrl" ng-cloak>
+   
+   <h1 style="text-align: center">Užregistruoti naują rezultatą</h1>
+   
+   <h3 style="text-align: center"><b>#1 Komanda</b></h3>
+   <br>
+   <br>
+   
+   
+   <table id="cssTable">
+		  <tr>
+			<th>Pirmas žaidėjas</th>
+			<th>Antras žaidėjas</th>
+			<th>Rezultatas</th>
+		  </tr>
+		  <tr style="text-align: center"   ng-style="{
+            'background': '#FAFAFA'
+            }">
+			<td height = "100px" style='width:400px;'>
+				<div class="styled-select">
+				<select >
+					<option>Haris</option>
+					<option selected>Dainius</option>
+					<option>Jurgis</option>
+					<option>Evelina</option>
+				</select>
+				</div>
+			</td>
+			<td height = "100px" style='width:400px;'>
+				<div class="styled-select">
+				<select >
+					<option>Haris</option>
+					<option selected>Dainius</option>
+					<option>Jurgis</option>
+					<option>Evelina</option>
+				</select>
+				</div>
+			</td>
+			<td height = "100px" style='width:400px;'>
+				<input type="text" name="firstname"><br>
+			</td>
+		  </tr>
+		</table>
+		<br>
+		<br>
+		<br>
+		<h3 style="text-align: center"><b>#2 Komanda</b></h3>
+		<br>
+		<table id="cssTable">
+		  <tr>
+			<th>Pirmas žaidėjas</th>
+			<th>Antras žaidėjas</th>
+			<th>Rezultatas</th>
+		  </tr>
+		  <tr style="text-align: center" ng-style="{
+            'background': '#FAFAFA'
+            }"> 
+			<td height = "100px" style='width:400px;'>
+				<div class="styled-select">
+				<select >
+					<option>Haris</option>
+					<option selected>Dainius</option>
+					<option>Jurgis</option>
+					<option>Evelina</option>
+				</select>
+				</div>
+			</td>
+			<td height = "100px" style='width:400px;'>
+				<div class="styled-select">
+				<select >
+					<option>Haris</option>
+					<option selected>Dainius</option>
+					<option>Jurgis</option>
+					<option>Evelina</option>
+				</select>
+				</div>
+			</td>
+			<td height = "100px" style='width:400px;'>
+				<input type="text" name="firstname"><br>
+			</td>
+		  </tr>
+		</table>
+		<br>
+		<br>
+		<div style="text-align:center;">
+			<button type="submit" ng-disabled="form.$invalid || vm.dataLoading" class="btn btn-primary submit-button-addGame">Patvirtinti</button>
+		</div>
+
+    
+</div>
