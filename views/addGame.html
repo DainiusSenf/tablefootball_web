@@ -18,26 +18,20 @@
             }">
 			<td height = "100px" style='width:400px;'>
 				<div class="styled-select">
-				<select >
-					<option>Haris</option>
-					<option selected>Dainius</option>
-					<option>Jurgis</option>
-					<option>Evelina</option>
+				<select ng-model="player1">
+					<option value="{{user.id}}" ng-repeat="user in users">{{user.username}}</option>
 				</select>
 				</div>
 			</td>
 			<td height = "100px" style='width:400px;'>
 				<div class="styled-select">
-				<select >
-					<option>Haris</option>
-					<option selected>Dainius</option>
-					<option>Jurgis</option>
-					<option>Evelina</option>
+				<select ng-model="player2">
+					<option value="{{user.id}}" ng-repeat="user in users">{{user.username}}</option>
 				</select>
 				</div>
 			</td>
 			<td height = "100px" style='width:400px;'>
-				<input type="text" name="firstname"><br>
+				<input type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57' name="score1" ng-model="score1"><br>
 			</td>
 		  </tr>
 		</table>
@@ -57,26 +51,20 @@
             }"> 
 			<td height = "100px" style='width:400px;'>
 				<div class="styled-select">
-				<select >
-					<option>Haris</option>
-					<option selected>Dainius</option>
-					<option>Jurgis</option>
-					<option>Evelina</option>
+				<select ng-model="player3">
+					<option value="{{user.id}}" ng-repeat="user in users">{{user.username}}</option>
 				</select>
 				</div>
 			</td>
 			<td height = "100px" style='width:400px;'>
 				<div class="styled-select">
-				<select >
-					<option>Haris</option>
-					<option selected>Dainius</option>
-					<option>Jurgis</option>
-					<option>Evelina</option>
+				<select ng-model="player4">
+					<option value="{{user.id}}" ng-repeat="user in users">{{user.username}}</option>
 				</select>
 				</div>
 			</td>
 			<td height = "100px" style='width:400px;'>
-				<input type="text" name="firstname"><br>
+				<input type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57' name="score2" ng-model="score2"><br>
 			</td>
 		  </tr>
 		</table>

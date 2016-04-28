@@ -1,6 +1,6 @@
 'use strict';
 
-var app = angular.module('BlankApp', ['ui.bootstrap', 'ui.router', 'ui.navbar', 'ngMaterial' , 'rezultatai', 'rankas', 'myPage', 'register']);
+var app = angular.module('BlankApp', ['ui.bootstrap', 'ui.router', 'ui.navbar', 'ngMaterial' , 'rezultatai', 'rankas', 'myPage', 'register','addGame']);
 
 app.config(function($stateProvider, $urlRouterProvider) {
     
@@ -66,7 +66,8 @@ app.config(function($stateProvider, $urlRouterProvider) {
 		
 		.state('addGame', {
             url: '/addGame',
-            templateUrl: 'views/addGame.html'			
+            templateUrl: 'views/addGame.html',
+			controller: 'AddGameCTRL'					
         })
 })
 		.controller('NavigationController', function($scope,$location,$http) {
