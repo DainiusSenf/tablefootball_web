@@ -1,7 +1,6 @@
-<div ng-controller="myPageCtrl as appCtrl" ng-cloak>
-<h2 style="text-align: center">Turite 5 nepatvirtintus žaidimus</h2>
-<h2 style="text-align: center">Paskutinių 5 mano žaidimų rezultatai</h2>
-<br>
+<div ng-cloak >
+<h2 style="text-align: center">Paskutinių 5 žaidimų rezultatai</h2>
+<br >
 
    <md-content>
 		<div style="margin:0 auto;">
@@ -10,24 +9,22 @@
 			<th>Komanda #1</th>
 			<th>Rezultatas</th>
 			<th>Komanda #2</th>
-			<th>Patvirtinti</th>
 		  </tr>
-		  <tr style="text-align: center" ng-repeat="tile in appCtrl.colorTiles"
+		  <tr style="text-align: center" ng-repeat="game in games track by $index"
 		  ng-style="{
             'background': tile.color
             }"
             md-colspan-gt-sm="{{tile.colspan}}"
             md-rowspan-gt-sm="{{tile.rowspan}}">
-			<td height = "100px" width = "40%">
-				<p>Dainius</p>
-				<p>Haris</p>
+			<td height = "100px" width = "50%">
+				<p>{{game.team1user1}}</p>
+				<p>{{game.team1user2}}</p>
 			</td>
-			<td height = "100px">10 - 9</td>
-			<td height = "100px" width = "40%">
-				<p>Dainius</p>
-				<p>Haris</p>
+			<td height = "100px">{{game.team1score}} - {{game.team2score}}</td>
+			<td height = "100px" width = "50%">
+				<p>{{game.team2user1}}</p>
+				<p>{{game.team2user2}}</p>
 			</td>
-			<td width = "40%"><button type="submit" ng-disabled="form.$invalid || vm.dataLoading" class="btn btn-primary">Patvirtinti</button></td>
 		  </tr>
 		</table>
 		</div>

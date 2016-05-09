@@ -2,14 +2,13 @@
 
 		require_once 'db.php'; 
 		
-		if(isset($_GET['username'])){
-			$username = $_GET['username'];
-			$psw = $_GET['password'];
-			$admin = $_GET['admin'];
-			$email = $_GET['email'];
-			
+		if(isset($_GET['player'])){
+			$player = $_GET['player'];
+			$elo = $_GET['elo'];
+			$elo = intval($elo);
+						
 			try{
-				$sql = "INSERT INTO users(username,password,admin,email) VALUES ('$username','$psw','$admin','$email')";
+				$sql = "UPDATE users SET elo='$elo' WHERE username='$player'";
 		
 				$stmt = $dbh->prepare( $sql );
 				$stmt->execute();

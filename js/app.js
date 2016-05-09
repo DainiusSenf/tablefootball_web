@@ -70,7 +70,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
 			controller: 'AddGameCTRL'					
         })
 })
-		.controller('NavigationController', function($scope,$location,$http) {
+		.controller('NavigationController', function($scope,$rootScope,$location,$http) {
 
 		  $scope.tree = [{
 			name: "Videos",
@@ -101,6 +101,8 @@ app.config(function($stateProvider, $urlRouterProvider) {
 			 $scope.login = function() { 
 				$http.get("js/php/login.php?username=" + $scope.username+"&password=" + $scope.password).success(function(data){
 				if(data.length == 1){
+					$rootScope.logedinUserId = data[0].id;
+					$rootScope.admin = data[0].admin;
 					$scope.logedinValue = true;
 					$scope.logedoutValue = false;
 					alert("Login success");

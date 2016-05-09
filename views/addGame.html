@@ -1,4 +1,4 @@
-<div ng-controller="AppCtrl as appCtrl" ng-cloak>
+<div ng-cloak>
    
    <h1 style="text-align: center">Užregistruoti naują rezultatą</h1>
    
@@ -19,14 +19,14 @@
 			<td height = "100px" style='width:400px;'>
 				<div class="styled-select">
 				<select ng-model="player1">
-					<option value="{{user.id}}" ng-repeat="user in users">{{user.username}}</option>
+					<option value="{{user.username}}" ng-repeat="user in users">{{user.username}}</option>
 				</select>
 				</div>
 			</td>
 			<td height = "100px" style='width:400px;'>
 				<div class="styled-select">
 				<select ng-model="player2">
-					<option value="{{user.id}}" ng-repeat="user in users">{{user.username}}</option>
+					<option value="{{user.username}}" ng-repeat="user in users">{{user.username}}</option>
 				</select>
 				</div>
 			</td>
@@ -52,18 +52,16 @@
 			<td height = "100px" style='width:400px;'>
 				<div class="styled-select">
 				<select ng-model="player3">
-					<option value="{{user.id}}" ng-repeat="user in users">{{user.username}}</option>
+					<option value="{{user.username}}" ng-repeat="user in users">{{user.username}}</option>
 				</select>
 				</div>
-				{{player3}}
 			</td>
 			<td height = "100px" style='width:400px;'>
 				<div class="styled-select">
 				<select ng-model="player4">
-					<option value="{{user.id}}" ng-repeat="user in users">{{user.username}}</option>
+					<option value="{{user.username}}" ng-repeat="user in users">{{user.username}}</option>
 				</select>
 				</div>
-				{{player4}}
 			</td>
 			<td height = "100px" style='width:400px;'>
 				<input type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57' name="score2" ng-model="score2"><br>
@@ -73,7 +71,7 @@
 		<br>
 		<br>
 		<div style="text-align:center;">
-			<button type="submit" ng-disabled="form.$invalid || vm.dataLoading" class="btn btn-primary submit-button-addGame" ng-click="submit()">Patvirtinti</button>
+			<button class="btn btn-primary submit-button-addGame" ng-click="submit()">Patvirtinti</button>
 		</div>
 
     
