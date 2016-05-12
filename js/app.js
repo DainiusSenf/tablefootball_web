@@ -101,7 +101,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
 			 $scope.login = function() { 
 				$http.get("js/php/login.php?username=" + $scope.username+"&password=" + $scope.password).success(function(data){
 				if(data.length == 1){
-					$rootScope.logedinUserId = data[0].id;
+					$rootScope.logedinUserId = data[0].username;
 					$rootScope.admin = data[0].admin;
 					$scope.logedinValue = true;
 					$scope.logedoutValue = false;

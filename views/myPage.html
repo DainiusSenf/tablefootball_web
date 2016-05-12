@@ -1,16 +1,15 @@
 <div ng-cloak >
-<h2 style="text-align: center">Paskutinių 5 žaidimų rezultatai</h2>
+<h2 style="text-align: center">{{username}} paskutinių žaidimų rezultatai</h2>
 <br >
 
    <md-content>
-		<div style="margin:0 auto;">
-		<table id="cssTable">
+		<table id="cssTable" ng-hide="admin()">
 		  <tr>
 			<th>Komanda #1</th>
 			<th>Rezultatas</th>
 			<th>Komanda #2</th>
 		  </tr>
-		  <tr style="text-align: center" ng-repeat="game in games track by $index"
+		  <tr class="border_bottom" style="text-align: center" ng-repeat="game in games"
 		  ng-style="{
             'background': tile.color
             }"
@@ -27,13 +26,45 @@
 			</td>
 		  </tr>
 		</table>
-		</div>
+		
+		<table id="cssTable" ng-show="admin()">
+		  <tr>
+			<th>Komanda #1</th>
+			<th>Rezultatas</th>
+			<th>Komanda #2</th>
+		  </tr>
+		  <tr class="border_bottom" style="text-align: center" ng-repeat="game in games"
+		  ng-style="{
+            'background': tile.color
+            }"
+            md-colspan-gt-sm="{{tile.colspan}}"
+            md-rowspan-gt-sm="{{tile.rowspan}}">
+			<td height = "100px" width = "50%">
+				<p><a ng-click="reload()" href="#/myPage?userId={{game.team1user1}} ">{{game.team1user1}}</a></p>
+				<p><a ng-click="reload()" href="#/myPage?userId={{game.team1user2}}">{{game.team1user2}}</a></p>
+			</td>
+			<td height = "100px">{{game.team1score}} - {{game.team2score}}</td>
+			<td height = "100px" width = "50%">
+				<p ng-click="reload()"><a href="#/myPage?userId={{game.team2user1}}">{{game.team2user1}}</a></p>
+				<p ng-click="reload()"><a href="#/myPage?userId={{game.team2user2}}">{{game.team2user2}}</a></p>
+			</td>
+			<td ng-show="admin()" width = "10%">
+				<button class="btn btn-danger submit-button-addGame" ng-click="deleteGame(game.gameId)">Istrinti</button>
+			</td>
+		  </tr>
+		</table>
 	 </md-content>
 	 <br>
 	 <br>
-	 <h2>Statistika</h2>
-	 <h3 >Geriausia vieta: 4</h2>
-	 <h3 >Laimeta is eiles: 2</h2>
-	 <h3 >Pralaimeta is eiles: 0</h2>
-	 <h3 >Laimejimo procentas: 40%</h2>
+	 <h2>{{username}} Statistika</h2>
+	 <h3 >Dabartinis rankas: {{currentRank}}</h2>
+	 <h3 >Aukščiausiai buvęs rankas:  {{playerStatistics[0].highestRank}}</h2>
+	 <h3 >Dabartiniai taškai:  {{currentElo}}</h2>
+	 <h3 >Daugiausiai taškų:  {{playerStatistics[0].highestElo}}</h2>
+	 <h3 >Mažiausiai taškų:  {{playerStatistics[0].lowestElo}}</h2>
+	 <h3 >Išviso žaidimų:  {{playerStatistics[0].gamesCount}}</h2>
+	 <h3 >Laimeta žaidimų:  {{playerStatistics[0].gamesWon}}</h2>
+	 <h3 >Pralaimetų žaidimų:  {{playerStatistics[0].gamesLost}}</h2>
+	 <h3 >Laimėjimo procentas:  {{playerStatistics[0].winRate}}%</h2>
+	 <h3 >Laimėta iš eilės:  {{playerStatistics[0].winStreak}}</h2>
 </div>

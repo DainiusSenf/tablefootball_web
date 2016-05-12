@@ -51,7 +51,7 @@
 				<p><a href="#/myPage?userId={{game.team2user2}}">{{game.team2user2}}</a></p>
 			</td>
 			<td ng-show="admin()" width = "10%">
-				<button class="btn btn-danger submit-button-addGame">Istrinti</button>
+				<button class="btn btn-danger submit-button-addGame" ng-click="deleteGame(game.gameId)">Istrinti</button>
 			</td>
 		  </tr>
 		</table>

@@ -2,7 +2,7 @@
 		require_once 'db.php'; 
 
         // a query get all the records from the users table
-        $sql = 'SELECT id, username FROM users';
+        $sql = 'SELECT id, username, elo FROM users ORDER By elo DESC';
 
         // use prepared statements, even if not strictly required is good practice
         $stmt = $dbh->prepare( $sql );

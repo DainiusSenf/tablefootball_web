@@ -19,11 +19,18 @@ angular.module('rezultatai', ['ngMaterial'])
   
   //$scope.isAdmin = isAdmin();
   $scope.admin = function() {
-	  console.log($rootScope.admin);
 	 if($rootScope.admin == "1")
 		 return true;
 	 return false;
   }
+  
+   $scope.deleteGame = function (gameId) {
+		$http.post("js/php/deleteGame.php?gameId=" + gameId)
+			.success(function(data){
+				console.log(data);
+				getGames();
+			 });
+	  };
   
  
 	

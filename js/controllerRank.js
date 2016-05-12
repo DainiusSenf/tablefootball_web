@@ -9,8 +9,7 @@ angular.module('rankas', ['ngMaterial'])
 	function getUsers(){
 		$http.get("js/php/getUsers.php").success(function(data){
 			console.log(data)
-		$scope.tasks = data;
-		console.log($scope.tasks)
+		$scope.users = data;
 		});
 	};
 });

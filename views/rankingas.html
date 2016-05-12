@@ -9,13 +9,13 @@
 			<th>Name</th>
 			<th>Score</th>
 		  </tr>
-		  <tr ng-repeat="user in tasks track by $index">
+		  <tr ng-repeat="user in users track by user.id">
 			<td width = "15%">
-				{{user.id}}
+				{{$index+1}}
 			</td>
 			<td>{{user.username}}</td>
 			<td width = "15%">
-			  100
+			  {{user.elo}}
 			</td>
 		  </tr>
 		</table>

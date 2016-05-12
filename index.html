@@ -3,7 +3,7 @@
 
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-	
+		<meta http-equiv="content-type" content="text/html; charset=utf8" />
 
 		<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" />
 
@@ -40,6 +40,7 @@
 		  <script src="node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
 			<script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js"></script>
 			<script src="node_modules/ui-navbar/release/js/ui-navbar.min.js"></script>
+			<script src="node_modules\angular-route/angular-route.min.js"></script>
 			
 			
 		  <!-- Angular Material Library -->
@@ -91,7 +92,7 @@
             <li ng-class="{ active: isActive('/rules')}"><a ui-sref="rules">Rules</a></li>
 			<li ng-class="{ active: isActive('/score')}"><a ui-sref="score">Rezultatai</a></li>
 			<li ng-class="{ active: isActive('/rankingas')}"><a ui-sref="rankingas">Rankingas</a></li>
-			<li ng-class="{ active: isActive('/addGame')}"><a ui-sref="addGame">+Žaidimą</a></li>
+			<li ng-class="{ active: isActive('/addGame')}"><a ui-sref="addGame">Pridėti žaidimą</a></li>
           </ul>
 		  <div id="logedin" ng-show="logedinValue">
 			  <ul class="nav navbar-nav navbar-right">
